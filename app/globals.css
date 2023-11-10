@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.rootLayout {
+  display: flex;
+  gap: 2rem;
+}
+
+.currentLink {
+  color: red;
+}
