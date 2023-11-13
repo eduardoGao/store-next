@@ -1,4 +1,4 @@
-export const categories = [
+const categories = [
   {
       icon: "cafe",
       name: "Café"
@@ -24,3 +24,5 @@ export const categories = [
       name: "Galletas"
     }
 ]
+
+module.exports = { categories }

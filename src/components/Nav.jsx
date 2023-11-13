@@ -8,7 +8,7 @@ import { useStoreContext } from '../context/store-context'
 
 const getCategories = async () => {
   try {
-    const res = await fetch('api')
+    const res = await fetch('/api')
     const { categories } = await res.json()
   
     return categories
@@ -28,20 +28,19 @@ export const Nav = () => {
   const router = useRouter()
   useEffect(() => {
     if(categories.length > 0 && pathname === '/') {
-      router.push(`/${categories[0]?.id}`)
+      router.push(`/category/${categories[0]?.id}`)
     }
   
   }, [categories])
   
-  const { test, handleCurrentCategory } = useStoreContext()
+  const { handleCurrentCategory } = useStoreContext()
 
   
 
   return (
     <nav>
-      <span>{test}</span>
       {categories.map(item => (
-        <Link key={item.id} href={`/${item.id}`} onClick={() => handleCurrentCategory(item)} className={pathname === `/${item.id}` ? 'currentLink' : ''}>
+        <Link key={item.id} href={`/category/${item.id}`} onClick={() => handleCurrentCategory(item)} className={pathname === `/${item.id}` ? 'currentLink' : ''}>
           <li>{item.name}</li>
         </Link>
       ))}

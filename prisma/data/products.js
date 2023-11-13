@@ -1,4 +1,4 @@
-export const products = [
+const products = [
   {
       name: "Café Caramel con Chocolate",
       price: 59.9,
@@ -354,3 +354,5 @@ export const products = [
       category_id: 3
     }
 ]
+
+module.exports = { products }

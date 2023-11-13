@@ -34,3 +34,27 @@ body {
 .currentLink {
   color: red;
 }
+
+.page {
+  border: 1px solid red;
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 1.5rem 0;
+  border: 1px solid green;
+  padding: 1rem;
+}
+
+.card button {
+  background: salmon;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}

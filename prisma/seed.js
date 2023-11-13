@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
-import { categories } from "./data/categories.js";
-import { products } from "./data/products.js";
+const { PrismaClient } = require("@prisma/client");
+const { categories } = require("./data/categories.js");
+const { products } = require ("./data/products.js");
 
 const prisma = new PrismaClient()
 
@@ -8,13 +8,11 @@ const seedData = async () => {
 
   try {
     await prisma.category.createMany({
-      data: categories,
-      skipDuplicates: true
+      data: categories
     })
 
     await prisma.product.createMany({
-      data: products,
-      skipDuplicates: true
+      data: products
     })
   } catch (error) {
     console.log(error);
